@@ -20,5 +20,10 @@ class MainActivity : AppCompatActivity() {
                 startService(intent)
             }
         }
+
+        btn_stop_foreground.setOnClickListener {
+            val intent = Intent(this, NotificationService::class.java);
+            stopService(intent);
+        }
     }
 }
